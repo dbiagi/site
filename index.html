@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Noções de Javascript</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="alunounesp">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class='container content'>
+            <h2>Formulário: </h2>
+            <form class='form-horizontal'>
+                <fieldset>
+                    <div class='form-group'>
+                        <label class='control-label col-sm-3' for='nome'>Nome: </label>
+                        <div class='col-lg-5'>
+                            <input class='form-control' type='text' name='nome' placeholder='Nome' maxlength='200' />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label class='control-label col-sm-3' for='nome'>Email: </label>
+                        <div class='col-lg-5'>
+                            <input class='form-control' type='email' name='email' placeholder='Email' maxlength='200' />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label class='control-label col-sm-3' for='nome'>Cidade: </label>
+                        <div class='col-lg-5'>
+                            <select class='form-control' name='cidade'>
+                                <option>>>Selecione</option>
+                                <option value='1'>Bauru</option>
+                                <option value='2'>Tupã</option>
+                                <option value='2'>São Paulo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label class='control-label col-sm-3' for='nome'>Escolariadade: </label>
+                        <div class='col-lg-5'>
+                            <label class='checkbox-inline'>
+                                <input type='checkbox' name='escolaridade' value='1' />
+                                Ensino Fundamental
+                            </label>
+                            <label class='checkbox-inline'>
+                                <input type='checkbox' name='escolaridade' value='2' />
+                                Ensino Médio
+                            </label>
+                            <label class='checkbox-inline'>
+                                <input type='checkbox' name='escolaridade' value='3' />
+                                Superior
+                            </label>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class="col-sm-offset-7 col-sm-10">
+                            <input class='btn btn-default' type='submit' value='Enviar'/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class='container content'>
+                <h2>Tabela com informações: </h2>
+                <table class='table table-striped table-hover'>
+                    <tr>
+                        <th>Col 1</th>
+                        <th>Col 2</th>
+                        <th>Col 3</th>
+                        <th>Col 4</th>
+                    </tr>
+                    <tr>
+                        <td>user a</td>
+                        <td>user.a@email.com</td>
+                        <td>escolaridade</td>
+                        <td>cidade</td>
+                    </tr>
+                    <tr>
+                        <td>user b</td>
+                        <td>user.b@email.com</td>
+                        <td>escolaridade</td>
+                        <td>cidade</td>
+                    </tr>
+                    <tr>
+                        <td>user v</td>
+                        <td>user.v@email.com</td>
+                        <td>escolaridade</td>
+                        <td>cidade</td>
+                    </tr>
+                    <tr>
+                        <td>user d</td>
+                        <td>user.d@email.com</td>
+                        <td>escolaridade</td>
+                        <td>cidade</td>
+                    </tr>
+                    <tr>
+                        <td>user e</td>
+                        <td>user.e@email.com</td>
+                        <td>escolaridade</td>
+                        <td>cidade</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class='container content'>
+            <button class='btn default-btn' id='bt_ajax'>Teste Ajax</button>
+            <div id='resultadoAjax'></div>
+        </div>
+
+        <script src='js/jquery-1.11.2.min.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
