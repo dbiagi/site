@@ -6,7 +6,11 @@
     <body>
         <div class="container content">
             <?php include_once SITE_DIR . '/includes/navbar.php' ?>
-            <h2>Tabela com informações: </h2>
+
+            <div class="container page-header">
+                <h2>Tabela com informações: </h2>
+            </div>
+            
             <table class='table table-striped table-hover'>
                 <tr>
                     <th>Col 1</th>
@@ -46,7 +50,7 @@
                 </tr>
             </table>
         </div>
-        
+
         <!-- Inclusão de scripts comuns a várias paginas -->
         <?php include_once 'includes/js.php'; ?>
     </body>

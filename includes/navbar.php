@@ -7,7 +7,7 @@
         </div>
         <div>
             <ul class="navbar-nav nav">
-                <li><a>Sobre</a></li>
+                <li><a href="http://<?php echo SITE_URL ?>/sobre.php">Sobre</a></li>
                 <li><a href="http://<?php echo SITE_URL ?>/listagem.php">Listagem</a></li>
                 <li><a href="http://<?php echo SITE_URL ?>/contato.php">Contato</a></li>
             </ul>
