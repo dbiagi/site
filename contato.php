@@ -10,8 +10,8 @@
                 <div class="container page-header">
                     <h2>Contato: </h2>
                 </div>
-                
-                <form class='form-horizontal'>
+
+                <form class='form-horizontal' action="formContato.php" method="POST">
                     <fieldset>
                         <div class='form-group'>
                             <label class='control-label col-sm-3' for='nome'>Nome: </label>
@@ -26,31 +26,19 @@
                             </div>
                         </div>
                         <div class='form-group'>
-                            <label class='control-label col-sm-3' for='nome'>Cidade: </label>
+                            <label class='control-label col-sm-3' for='nome'>Curso: </label>
                             <div class='col-lg-5'>
-                                <select class='form-control' name='cidade'>
+                                <select class='form-control' name='curso'>
                                     <option>>>Selecione</option>
-                                    <option value='1'>Bauru</option>
-                                    <option value='2'>Tupã</option>
-                                    <option value='2'>São Paulo</option>
+                                    <option value='Bacharelado em Sistemas de Informação'>Bacharelado em Sistemas de Informação</option>
+                                    <option value='Bacharelado em Sistemas de Informação'>Bacharelado em Ciência da Computação</option>
                                 </select>
                             </div>
                         </div>
                         <div class='form-group'>
-                            <label class='control-label col-sm-3' for='nome'>Escolariadade: </label>
+                            <label class="control-label col-sm-3" for="mensagem">Mensagem: </label>
                             <div class='col-lg-5'>
-                                <label class='checkbox-inline'>
-                                    <input type='checkbox' name='escolaridade' value='1' />
-                                    Ensino Fundamental
-                                </label>
-                                <label class='checkbox-inline'>
-                                    <input type='checkbox' name='escolaridade' value='2' />
-                                    Ensino Médio
-                                </label>
-                                <label class='checkbox-inline'>
-                                    <input type='checkbox' name='escolaridade' value='3' />
-                                    Superior
-                                </label>
+                                <textarea class="form-control" id="mensagem" name='mensagem' placeholder="Digite sua mensagem aqui."></textarea>
                             </div>
                         </div>
                         <div class='form-group'>
@@ -60,10 +48,16 @@
                         </div>
                     </fieldset>
                 </form>
+                <div class="message-div">
+                    <?php if (isset($_GET['msg']) && $_GET['msg'] == 'ok'): ?>
+                        <div class="bg-success ok"><p class="text-center"> Seu contato foi enviado com <strong>sucesso</strong>.</p></div>
+                    <?php elseif (isset($_GET['msg']) && $_GET['msg'] == 'erro'): ?>
+                        <div class="bg-danger ok"><p> Ops, algo deu errado.</p></div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
-        
-        <?php include_once SITE_DIR . '/includes/footer.php' ?>
+
         <!-- Inclusão de scripts comuns a várias paginas -->
         <?php include_once SITE_DIR . '/includes/js.php'; ?>
     </body>

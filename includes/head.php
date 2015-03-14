@@ -5,7 +5,9 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="alunounesp">
     <link rel="stylesheet" href="http://<?php echo SITE_URL ?>/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://<?php echo SITE_URL ?>/css/global.css">
+    
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
