@@ -1,22 +1,12 @@
 <!doctype html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-
-        <title>Noções de Javascript</title>
-        <meta name="description" content="The HTML5 Herald">
-        <meta name="author" content="alunounesp">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-
+    <?php include_once './globals.php'; ?>
+    <?php include_once './includes/head.php'; ?>
     <body>
-        <div class='container content'>
-            <h2>Formulário: </h2>
+        <div class="container content">
+            <?php include_once './includes/navbar.php'; ?>
+
+            <h2>Contato: </h2>
             <form class='form-horizontal'>
                 <fieldset>
                     <div class='form-group'>
@@ -66,57 +56,9 @@
                     </div>
                 </fieldset>
             </form>
-
-            <div class='container content'>
-                <h2>Tabela com informações: </h2>
-                <table class='table table-striped table-hover'>
-                    <tr>
-                        <th>Col 1</th>
-                        <th>Col 2</th>
-                        <th>Col 3</th>
-                        <th>Col 4</th>
-                    </tr>
-                    <tr>
-                        <td>user a</td>
-                        <td>user.a@email.com</td>
-                        <td>escolaridade</td>
-                        <td>cidade</td>
-                    </tr>
-                    <tr>
-                        <td>user b</td>
-                        <td>user.b@email.com</td>
-                        <td>escolaridade</td>
-                        <td>cidade</td>
-                    </tr>
-                    <tr>
-                        <td>user v</td>
-                        <td>user.v@email.com</td>
-                        <td>escolaridade</td>
-                        <td>cidade</td>
-                    </tr>
-                    <tr>
-                        <td>user d</td>
-                        <td>user.d@email.com</td>
-                        <td>escolaridade</td>
-                        <td>cidade</td>
-                    </tr>
-                    <tr>
-                        <td>user e</td>
-                        <td>user.e@email.com</td>
-                        <td>escolaridade</td>
-                        <td>cidade</td>
-                    </tr>
-                </table>
-            </div>
         </div>
-
-        <div class='container content'>
-            <button class='btn default-btn' id='bt_ajax'>Teste Ajax</button>
-            <div id='resultadoAjax'></div>
-        </div>
-
-        <script src='js/jquery-1.11.2.min.js'></script>
-        <script src='js/bootstrap.min.js'></script>
-        <script src="js/index.js"></script>
+        
+        <!-- Inclusão de scripts comuns a várias paginas -->
+        <?php include_once 'includes/js.php'; ?>
     </body>
 </html>
