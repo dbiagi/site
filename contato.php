@@ -16,19 +16,19 @@
                         <div class='form-group'>
                             <label class='control-label col-sm-3' for='nome'>Nome: </label>
                             <div class='col-lg-5'>
-                                <input class='form-control' type='text' name='nome' placeholder='Nome' maxlength='200' />
+                                <input class='form-control required' type='text' name='nome' placeholder='Nome' maxlength='200' />
                             </div>
                         </div>
                         <div class='form-group'>
                             <label class='control-label col-sm-3' for='nome'>Email: </label>
                             <div class='col-lg-5'>
-                                <input class='form-control' type='email' name='email' placeholder='Email' maxlength='200' />
+                                <input class='form-control required' type='email' name='email' placeholder='Email' maxlength='200' />
                             </div>
                         </div>
                         <div class='form-group'>
                             <label class='control-label col-sm-3' for='nome'>Curso: </label>
                             <div class='col-lg-5'>
-                                <select class='form-control' name='curso'>
+                                <select class='form-control required' name='curso'>
                                     <option>>>Selecione</option>
                                     <option value='Bacharelado em Sistemas de Informação'>Bacharelado em Sistemas de Informação</option>
                                     <option value='Bacharelado em Sistemas de Informação'>Bacharelado em Ciência da Computação</option>
@@ -38,7 +38,7 @@
                         <div class='form-group'>
                             <label class="control-label col-sm-3" for="mensagem">Mensagem: </label>
                             <div class='col-lg-5'>
-                                <textarea class="form-control" id="mensagem" name='mensagem' placeholder="Digite sua mensagem aqui."></textarea>
+                                <textarea class="form-control required" id="mensagem" name='mensagem' placeholder="Digite sua mensagem aqui."></textarea>
                             </div>
                         </div>
                         <div class='form-group'>
@@ -57,8 +57,11 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Inclusão de scripts comuns a várias paginas -->
         <?php include_once SITE_DIR . '/includes/js.php'; ?>
+
+        <!-- Inclusão de scripts comuns a várias paginas -->
+        <script type="text/javascript" src="<?php echo 'http://' . SITE_URL . '/js/contato.js'; ?>"></script>
     </body>
 </html>

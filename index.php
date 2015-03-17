@@ -14,6 +14,7 @@
                 </div>
 
                 <div class="noticias">
+                    <h2>Notícias: </h2>
                     <?php foreach (Repositorio::getNoticias() as $noticia): ?>
                         <blockquote>
                             <h2><?php echo $noticia->titulo ?></h2>
