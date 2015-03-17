@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $db = Database::getInstance();
         //$db = new Database();
         $stmt = $db->prepare($insert);
+        
         $stmt->execute($parametros_pdo);
         
         $msg = $parametros_pdo[':nome'] . ', ';

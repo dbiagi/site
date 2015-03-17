@@ -17,8 +17,6 @@ class Repositorio {
         $dados = array();
         try {
             $db = Database::getInstance();
-            //$db = new Database();
-
             $sql = 'SELECT * FROM noticia';
             $stmt = $db->prepare($sql);
             $stmt->execute();
@@ -34,7 +32,7 @@ class Repositorio {
     /**
      * Busca a notícia de id igual a <b>$codnoticia</b>
      * @param Integer $codnoticia Id da notícia
-     * @return StdClass Objeto contendo os dados da notícia
+     * @return stdClass Objeto contendo os dados da notícia
      */
     public static function getNoticia($codnoticia) {
         $dado = null;

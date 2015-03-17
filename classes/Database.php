@@ -18,6 +18,10 @@ class Database extends PDO{
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
+    /**
+     * 
+     * @return Database Retorna a classe Database devidamente instanciada.
+     */
     public static function getInstance(){
         if(self::$database === null){
             self::$database = new Database();
