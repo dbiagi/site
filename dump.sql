@@ -1,22 +1,49 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           5.6.11 - MySQL Community Server (GPL)
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              9.1.0.4905
+-- Versão do servidor:           5.6.23-log - MySQL Community Server (GPL)
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              9.1.0.4867
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Copiando estrutura do banco de dados para site
+CREATE DATABASE IF NOT EXISTS `site` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `site`;
+
+
+-- Copiando estrutura para tabela site.contato
+CREATE TABLE IF NOT EXISTS `contato` (
+  `codcontato` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` char(255) DEFAULT NULL,
+  `email` char(255) DEFAULT NULL,
+  `curso` char(255) DEFAULT NULL,
+  `dataContato` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `mensagem` text,
+  PRIMARY KEY (`codcontato`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
 -- Copiando dados para a tabela site.contato: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `contato` DISABLE KEYS */;
-INSERT INTO `contato` (`codcontato`, `nome`, `email`, `curso`, `mensagem`, `dataContato`) VALUES
-	(3, 'diego de biagi viana', 'diegobiagiviana@gmail.com', 'Bacharelado em Sistemas de Informação', 'teste', '2015-03-14 19:35:36'),
-	(4, 'Oswaldo de Macedo e Silva', 'diegobiagiviana@gmail.com', 'Bacharelado em Sistemas de Informação', '4tftu 4ft0u4 f40ut f4u9f04u8 ft08u0 \r\n', '2015-03-14 19:52:02');
+INSERT INTO `contato` (`codcontato`, `nome`, `email`, `curso`, `dataContato`, `mensagem`) VALUES
+	(3, 'diego de biagi viana', 'diegobiagiviana@gmail.com', 'Bacharelado em Sistemas de Informação', '2015-03-14 19:35:36', 'teste'),
+	(4, 'Oswaldo de Macedo e Silva', 'diegobiagiviana@gmail.com', 'Bacharelado em Sistemas de Informação', '2015-03-14 19:52:02', '4tftu 4ft0u4 f40ut f4u9f04u8 ft08u0 \r\n');
 /*!40000 ALTER TABLE `contato` ENABLE KEYS */;
 
--- Copiando dados para a tabela site.noticia: ~3 rows (aproximadamente)
+
+-- Copiando estrutura para tabela site.noticia
+CREATE TABLE IF NOT EXISTS `noticia` (
+  `codnoticia` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` char(255) DEFAULT NULL,
+  `resumo` char(255) DEFAULT NULL,
+  `conteudo` text,
+  PRIMARY KEY (`codnoticia`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela site.noticia: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `noticia` DISABLE KEYS */;
 INSERT INTO `noticia` (`codnoticia`, `titulo`, `resumo`, `conteudo`) VALUES
 	(7, 'Mobilidade dos capitais', 'Reformulação e modernização dos procedimentos', '<p class="paragraph"><span class="tab">Neste sentido, a mobilidade dos capitais internacionais acarreta um processo de reformulação e modernização dos procedimentos normalmente adotados. É importante questionar o quanto a expansão dos mercados mundiais promove a alavancagem das diretrizes de desenvolvimento para o futuro. Ainda assim, existem dúvidas a respeito de como o consenso sobre a necessidade de qualificação afeta positivamente a correta previsão do levantamento das variáveis envolvidas. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">O cuidado em identificar pontos críticos no fenômeno da Internet estimula a padronização do orçamento setorial. O incentivo ao avanço tecnológico, assim como a necessidade de renovação processual possibilita uma melhor visão global das condições inegavelmente apropriadas. Assim mesmo, a adoção de políticas descentralizadoras facilita a criação de alternativas às soluções ortodoxas. Evidentemente, a revolução dos costumes talvez venha a ressaltar a relatividade do processo de comunicação como um todo. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Caros amigos, a constante divulgação das informações pode nos levar a considerar a reestruturação do sistema de participação geral. A certificação de metodologias que nos auxiliam a lidar com a hegemonia do ambiente político prepara-nos para enfrentar situações atípicas decorrentes do retorno esperado a longo prazo. Desta maneira, a execução dos pontos do programa estende o alcance e a importância dos relacionamentos verticais entre as hierarquias. Gostaria de enfatizar que o início da atividade geral de formação de atitudes nos obriga à análise dos métodos utilizados na avaliação de resultados. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Todavia, o acompanhamento das preferências de consumo assume importantes posições no estabelecimento das diversas correntes de pensamento. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a contínua expansão de nossa atividade apresenta tendências no sentido de aprovar a manutenção das condições financeiras e administrativas exigidas. Acima de tudo, é fundamental ressaltar que a competitividade nas transações comerciais deve passar por modificações independentemente das posturas dos órgãos dirigentes com relação às suas atribuições. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Não obstante, o novo modelo estrutural aqui preconizado agrega valor ao estabelecimento do impacto na agilidade decisória. Por outro lado, a percepção das dificuldades cumpre um papel essencial na formulação do remanejamento dos quadros funcionais. O empenho em analisar a valorização de fatores subjetivos não pode mais se dissociar dos índices pretendidos. No entanto, não podemos esquecer que a determinação clara de objetivos é uma das consequências da gestão inovadora da qual fazemos parte. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Percebemos, cada vez mais, que a crescente influência da mídia faz parte de um processo de gerenciamento do fluxo de informações. As experiências acumuladas demonstram que o julgamento imparcial das eventualidades auxilia a preparação e a composição do investimento em reciclagem técnica. No mundo atual, a consolidação das estruturas exige a precisão e a definição dos conhecimentos estratégicos para atingir a excelência. </span></p>'),
@@ -24,10 +51,6 @@ INSERT INTO `noticia` (`codnoticia`, `titulo`, `resumo`, `conteudo`) VALUES
 	(9, 'Novo modelo estrutural', 'Importantes posições no estabelecimento do remanejamento dos quadros funcionais', '<p class="paragraph"><span class="tab">A nível organizacional, o novo modelo estrutural aqui preconizado maximiza as possibilidades por conta dos conhecimentos estratégicos para atingir a excelência. É importante questionar o quanto a constante divulgação das informações prepara-nos para enfrentar situações atípicas decorrentes do levantamento das variáveis envolvidas. O cuidado em identificar pontos críticos no desenvolvimento contínuo de distintas formas de atuação obstaculiza a apreciação da importância do fluxo de informações. No entanto, não podemos esquecer que o entendimento das metas propostas auxilia a preparação e a composição dos relacionamentos verticais entre as hierarquias. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Assim mesmo, a valorização de fatores subjetivos assume importantes posições no estabelecimento do remanejamento dos quadros funcionais. A prática cotidiana prova que a consolidação das estruturas oferece uma interessante oportunidade para verificação do investimento em reciclagem técnica. Podemos já vislumbrar o modo pelo qual o acompanhamento das preferências de consumo faz parte de um processo de gerenciamento dos índices pretendidos. Desta maneira, a competitividade nas transações comerciais nos obriga à análise dos procedimentos normalmente adotados. Do mesmo modo, a adoção de políticas descentralizadoras cumpre um papel essencial na formulação dos paradigmas corporativos. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Gostaria de enfatizar que a crescente influência da mídia promove a alavancagem dos modos de operação convencionais. Por conseguinte, a execução dos pontos do programa afeta positivamente a correta previsão de alternativas às soluções ortodoxas. Percebemos, cada vez mais, que a estrutura atual da organização acarreta um processo de reformulação e modernização do retorno esperado a longo prazo. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes aponta para a melhoria do orçamento setorial. Ainda assim, existem dúvidas a respeito de como a percepção das dificuldades agrega valor ao estabelecimento do processo de comunicação como um todo. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a expansão dos mercados mundiais apresenta tendências no sentido de aprovar a manutenção de todos os recursos funcionais envolvidos. As experiências acumuladas demonstram que o surgimento do comércio virtual deve passar por modificações independentemente das diversas correntes de pensamento. </span></p>'),
 	(10, 'O incentivo ao avanço tecnológico', 'Assim como a consulta aos diversos militantes aponta para a melhoria do orçamento setorial', '<p class="paragraph"><span class="tab">A nível organizacional, o novo modelo estrutural aqui preconizado maximiza as possibilidades por conta dos conhecimentos estratégicos para atingir a excelência. É importante questionar o quanto a constante divulgação das informações prepara-nos para enfrentar situações atípicas decorrentes do levantamento das variáveis envolvidas. O cuidado em identificar pontos críticos no desenvolvimento contínuo de distintas formas de atuação obstaculiza a apreciação da importância do fluxo de informações. No entanto, não podemos esquecer que o entendimento das metas propostas auxilia a preparação e a composição dos relacionamentos verticais entre as hierarquias. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Assim mesmo, a valorização de fatores subjetivos assume importantes posições no estabelecimento do remanejamento dos quadros funcionais. A prática cotidiana prova que a consolidação das estruturas oferece uma interessante oportunidade para verificação do investimento em reciclagem técnica. Podemos já vislumbrar o modo pelo qual o acompanhamento das preferências de consumo faz parte de um processo de gerenciamento dos índices pretendidos. Desta maneira, a competitividade nas transações comerciais nos obriga à análise dos procedimentos normalmente adotados. Do mesmo modo, a adoção de políticas descentralizadoras cumpre um papel essencial na formulação dos paradigmas corporativos. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">Gostaria de enfatizar que a crescente influência da mídia promove a alavancagem dos modos de operação convencionais. Por conseguinte, a execução dos pontos do programa afeta positivamente a correta previsão de alternativas às soluções ortodoxas. Percebemos, cada vez mais, que a estrutura atual da organização acarreta um processo de reformulação e modernização do retorno esperado a longo prazo. </span></p>\r\n\r\n<p class="paragraph"><span class="tab">O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes aponta para a melhoria do orçamento setorial. Ainda assim, existem dúvidas a respeito de como a percepção das dificuldades agrega valor ao estabelecimento do processo de comunicação como um todo. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a expansão dos mercados mundiais apresenta tendências no sentido de aprovar a manutenção de todos os recursos funcionais envolvidos. As experiências acumuladas demonstram que o surgimento do comércio virtual deve passar por modificações independentemente das diversas correntes de pensamento. </span></p>');
 /*!40000 ALTER TABLE `noticia` ENABLE KEYS */;
-
--- Copiando dados para a tabela site.sobre: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `sobre` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sobre` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
