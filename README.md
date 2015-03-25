@@ -1,2 +1,2 @@
 # site
-Site simples e funcional em PHP, HTML5 e JS
+Site simples e funcional usando PHP, MySql, HTML5 e Javascript.

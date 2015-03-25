@@ -9,7 +9,7 @@ class Database extends PDO{
     private static $DB_NAME = 'site';
     private static $DB_HOST = 'localhost';
     private static $DB_USER = 'root';
-    private static $DB_PWD = '123';
+    private static $DB_PWD = '1234';
     private static $database = null;
     
     public function __construct() {
